@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* group selector */
+      /* p,
+      b {
+        color: red;
+      }
+
+      i {
+        color: blue;
+      }
+      div {
+        color: yellowgreen;
+      } */
+
+      /* combinator */
+      div#else.some {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p>This is p tag</p>
+    <b>This is b tag</b>
+    <i>This is i tag</i> -->
+
+    <div class="some" id="no">Div with some class</div>
+    <div class="some" id="else">Div with some class and else id</div>
+    <div>Div with no class</div>
+    <p class="some">P with some class</p>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* child selector (>) */
+      .parent > .child {
+        border: 1px solid red;
+        /* color: brown; */
+      }
+      /* descendent selector */
+      .parent .sub-child {
+        border: 1px solid blue;
+      }
+
+      /* adjacent sibling selector (+) */
+      #this + .sub-child {
+        color: yellowgreen;
+      }
+      /* general sibling selector */
+      #this ~ .sub-child {
+        color: yellowgreen;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      <div class="child">
+        child1
+        <div class="child sub-child">sub-child1</div>
+        <div class="child sub-child">sub-child2</div>
+        <div class="child sub-child">sub-child3</div>
+      </div>
+      <div class="child">
+        child2
+        <div class="sub-child" id="this">sub-child1</div>
+        <div class="sub-child">sub-child2</div>
+        <div class="sub-child">sub-child3</div>
+        <div class="sub-child">sub-child4</div>
+        <div class="">sub-child5</div>
+      </div>
+      <div class="child">
+        child3
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">sub-child2</div>
+        <div class="sub-child">sub-child3</div>
+      </div>
+    </div>
+
+    <br />
+    <div class="sub-child">Outside</div>
+  </body>
+</html>
